@@ -466,15 +466,24 @@
 // 28-misol
 
 
+let a = +prompt('a');
+ let b = +prompt('b');
+ let c = +prompt('c');
 
-// let a = +prompt('a');
-//  let b = +prompt('b');
-//  let c = +prompt('c');
-
-//  if (a>b && b>c){
-//      console.log(b)
-//  }else if(a>c && c>b){
-//      console.log(c)
-//  }else{
-//      console.log(a)
-// 
+ let min;
+ let max;
+ if(a<b){
+    min = a;
+    max = b;
+ }else{
+    min = b;
+    max = a;
+ }
+ if(c<min){
+    min = c;
+ }
+ if(c>max){
+    max = c;
+ }
+ let result = (a+b+c)- (max+min);
+ console.log(result);
